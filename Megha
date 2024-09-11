@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megha, Will You Marry Me?</title>
+    <style>
+        body {
+            background-color: #ffebee;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #ff4081;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .yes-button, .no-button {
+            font-size: 1.5rem;
+            padding: 10px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .yes-button {
+            background-color: #ff4081;
+            color: white;
+        }
+        .yes-button:hover {
+            background-color: #ff79a7;
+        }
+        .no-button {
+            background-color: #ccc;
+            color: black;
+        }
+        .no-button:hover {
+            background-color: #999;
+        }
+        .heart {
+            font-size: 100px;
+            color: #ff4081;
+            animation: beat 1s infinite;
+        }
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Megha, Will You Marry Me?</h1>
+        <p>Since the moment I met you, my life has been brighter. You complete my heart, Megha. Will you marry me?</p>
+        <div class="heart">❤️</div>
+        <button class="yes-button" onclick="yes()">Yes</button>
+        <button class="no-button" onclick="no()">No</button>
+    </div>
+
+    <script>
+        function yes() {
+            alert("You’ve made me the happiest person alive, Megha! I love you!");
+            document.querySelector('.container').innerHTML = "<h1>Thank You, Megha!</h1><p>I can't wait to start this beautiful journey with you by my side.</p><div class='heart'>💖</div>";
+        }
+
+        function no() {
+            alert("Oh no, my heart is broken! 😢");
+            document.querySelector('.container').innerHTML = "<h1>Heartbroken!</h1><p>Maybe you'll change your mind one day.</p><div class='heart'>💔</div>";
+        }
+    </script>
+</body>
+</html>
